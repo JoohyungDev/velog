@@ -1,8 +1,8 @@
 # velog to github
-- 다음 레포지토리와 동일하게 셋팅 후, python 파일에서 자기 벨로그 주소를 적고, 권한 설정만 해주면 벨로그에 쓴 글을 자동으로 깃허브에 작성해준다.
+- 벨로그의 글들을 깃허브로 자동으로 옮기는 레포입니다.
 
 ## 1. github 새 레포지토리 만들기
-- public으로 다음과 같이 폴더를 구성해주고, github action을 위한 준비를 해주자.
+- 레포를 동일하게 구성합니다.
 ```
 your-github-repo/
 ├── .github/
@@ -56,7 +56,7 @@ jobs:
 
 ```
 
-- 매일 자정 또는 해당 레포지토리가 push 될 때 파이썬 스크립트를 실행하는 코드이다.
+- 매일 자정 또는 해당 레포지토리가 push 될 때 파이썬 스크립트를 실행하는 코드입니다.
 
 
 ## 3. 파이썬 스크립트 작성
@@ -112,10 +112,10 @@ repo.git.push()
 
 ## 4. PAT 권한 받기
 1. github 계정 - Settings - Developer Settings - Personal access tokens (classic) - Generate New Token - 이름 쓰고 repo, workflow 클릭 - Generate new token
-2. 받은 토큰 복사 (한 번 보여주고 그 뒤로 보여주지 않으므로 꼭 복사해놓자)
+2. 받은 토큰 복사 (한 번 보여주고 그 뒤로 보여주지 않습니다!)
 3. 위에서 생성한 레포지토리 - Settings - Actions secrets and variables - Actions - New Repository Secret
 4. Name : GH_PAT, Secret : [2번에서 발급받은 토큰]
 
 
 ## 5. 커밋 또는 자정까지 기다리기
-- 레포지토리에 push를 진행하면 다음과 같이 `velog-posts` 폴더에 자동으로 .md 파일로 저장되는 것을 볼 수 있다.
+- 레포지토리에 push를 진행하면 다음과 같이 `velog-posts` 폴더에 자동으로 .md 파일로 저장되는 것을 볼 수 있습니다.
