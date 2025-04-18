@@ -27,6 +27,7 @@ on:
         - main  # 또는 워크플로우를 트리거하고 싶은 브랜치 이름
   schedule:
     - cron: '0 0 * * *'  # 매일 자정에 실행
+  workflow_dispatch:  # 수동 실행을 위한 설정 추가
 
 jobs:
   update_blog:
