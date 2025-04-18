@@ -5,6 +5,7 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *'
+  workflow_dispatch:  # 수동 실행을 위한 설정 추가
 
 permissions:
   contents: write
